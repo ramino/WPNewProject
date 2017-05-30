@@ -1,0 +1,19 @@
+.site {
+    &-content {
+        margin: 10px 0;
+        
+        @include media-breakpoint-up(md) {
+            margin: 20px 0;
+        }
+    }
+    
+    &-title {
+        a {
+            text-decoration: none;
+        }
+    }
+    
+    &-description {
+        font-family: $custom-font-family;
+    }
+}

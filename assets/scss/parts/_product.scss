@@ -1,0 +1,187 @@
+.woocommerce {
+    width: 100%;
+}
+
+.product {
+    figure {
+        margin: 0;
+    }
+    
+    a, &-image {
+        position: relative;
+        
+        .onsale {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 47px;
+            height: 47px;
+            border-radius: 100%;
+            background-color: $brand-danger;
+            font-family: $custom-font-family;
+            font-size: 1.4rem;
+            color: #fff;
+            padding: 8px 0;
+            text-align: center;
+            z-index: 1;
+        }
+        
+        .woocommerce-product-gallery__trigger {
+            display: none;
+        }
+    }
+}
+
+.products {
+    @extend .row;
+    
+    padding: 0;
+    list-style: none;
+    
+    .product {
+        @extend .col-md-3;
+
+        a {
+            text-align: center;
+            text-decoration: none;
+            color: #4E4E4E;
+            
+            &:hover {
+                h2 {
+                    text-decoration: underline;
+                }
+            }
+            
+            &.add_to_cart_button {
+                display: none;
+            }
+        }
+        
+        h2 {
+            @extend .h3;
+            
+            font-family: $system-font-family;
+            text-transform: uppercase;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: $base-border-radius;
+            display: block;
+        }
+        
+        .price {
+            font-size: 1.6rem;
+            font-family: $custom-font-family;
+            font-weight: $font-weight-bold;
+            
+            ins {
+                text-decoration: none;
+            }
+            
+            del {
+                display: block; 
+                font-size: 1.1rem;
+                font-weight: $font-weight-normal;
+                color: $brand-primary;
+            }
+        }
+        
+        &.sale {
+            .price {
+                color: $brand-danger;
+            }
+        }
+    }
+    
+    &.related {
+        @extend .clearfix;
+    }
+}
+
+// Single
+.single {
+    .product {
+    }
+    
+    .woocommerce-tabs {
+        @extend .clearfix;
+    }
+}
+
+// Content
+.content {
+    .products {
+        .product {
+            a {
+                display: block;
+            }
+        }
+    }
+    
+    &-categories {
+        .products {
+            display: flex;
+            
+            .product {
+                @extend .col-md-6;
+                
+                a {
+                    @extend .row;
+                    @extend .no-gutters;
+                    
+                    border: 1px solid $brand-lightest;
+                    text-align: left;
+                    display: flex;
+                    border-radius: $base-border-radius;
+                    
+                    &:hover {
+                        border-color: $brand-secondary;
+                    }
+                    
+                    > div {
+                        overflow: hidden;
+                    }
+
+                    h2 {
+                        @extend .h1;
+                        
+                        padding: 5px;
+                        padding-bottom: 0;
+                        
+                        @include media-breakpoint-up(md) {
+                            padding: 10px;
+                            padding-bottom: 0;
+                        }
+                    }
+                    
+                    p {
+                        padding: 5px;
+                        padding-top: 0;
+                        
+                        @include media-breakpoint-up(md) {
+                            padding: 10px;
+                            padding-top: 0;
+                        }
+                    }
+                    
+                    .btn {
+                        border-color: $brand-secondary;
+                        color: $brand-secondary;
+                    }
+                    
+                    img {
+                        height: 100%;
+                        width: auto;
+                        max-width: inherit;
+                    }
+                }
+                
+                mark {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.banner {
+    margin: 10px 0;
+    min-height: auto;
+    
+    @include media-breakpoint-up(md) {
+        margin: 20px 0;
+    }
+    
+    &-title {
+        color: $brand-primary;
+        font-family: $custom-font-family;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: $base-border-radius;
+    }
+}

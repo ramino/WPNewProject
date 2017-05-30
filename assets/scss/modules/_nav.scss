@@ -1,0 +1,30 @@
+.nav {
+	//background-color: $brand-secondary;
+	//border-radius: $base-border-radius;
+}
+
+.menu-item {
+	@extend .nav-item;
+	
+	padding: 4px 0;
+	
+	a {
+		text-decoration: none;
+		padding: $padding-x $padding-y;
+		border: 1px solid $brand-primary;
+		border-radius: $base-border-radius;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
+	&.current-menu-item,
+	&.current-product-parent {
+		background-color: $brand-primary;
+		
+		a {
+			color: #fff;
+		}
+	}
+}

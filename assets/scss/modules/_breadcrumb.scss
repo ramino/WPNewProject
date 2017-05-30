@@ -1,0 +1,7 @@
+.woocommerce-breadcrumb {
+    margin-bottom: 10px;
+    
+    @include media-breakpoint-up(md) {
+        margin-bottom: 20px;
+    }
+}

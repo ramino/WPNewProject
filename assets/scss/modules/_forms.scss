@@ -1,0 +1,28 @@
+.form {
+    &-search {
+        justify-content: flex-end;
+        margin-right: 10px;
+        
+        .form-group {
+            position: relative;
+            
+            button {
+                background-color: #fff;
+                position: absolute;
+                right: 1px;
+                padding: 0 5px;
+                
+                svg {
+                    path {
+                        fill: $brand-secondary;
+                    }
+                }
+            }
+        }
+        
+        input[type="text"] {
+            border: 1px solid $brand-lightest;
+            color: $brand-secondary;
+        }
+    }
+}
